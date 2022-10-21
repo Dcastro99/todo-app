@@ -1,0 +1,16 @@
+#main{
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url(../../../images/bkgrTodo.jpg);
+  background-size: cover;
+  height:85vh;
+  width: 70%;
+  margin: auto; 
+}
+#titleHome{
+  margin: 10px;
+  font-size: 70px;
+  color:#ffa384;
+  text-shadow:2px 2px #36343455;
+}

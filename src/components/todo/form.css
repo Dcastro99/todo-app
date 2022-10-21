@@ -1,0 +1,12 @@
+#todoContainer{
+  display: flex;
+  flex-direction: row; 
+  justify-content:space-between;
+  padding: 50px 60rem 50px 15rem;
+}
+
+#formBox {
+  padding:3rem;
+  border:solid #EFE7BC;
+  border-radius: 10px;
+}
