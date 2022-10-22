@@ -3,13 +3,15 @@ import Header from '../components/header'
 import Todo from '../components/todo/form'
 import Footer from '../components/footer'
 
-export default function todoPage() {
+export default function todoPage(props) {
+  // console.log('PROPS', props)
   return (
     <div>
       <Header />
-      <Todo />
+      <Todo handleTask={props.handleTask} />
       <Footer />
 
     </div>
   )
 }
+// handleTask={ }

@@ -1,12 +1,32 @@
-import * as React from "react";
+import React from "react";
 import ColumnLayout from "@cloudscape-design/components/column-layout";
+import './list.css'
 
-export default function list() {
+let newTask = [];
+let set = new Set();
+
+
+export default function List(props) {
+  let taskList = newTask;
+
+
+  if (!set.has(props.task.todo)) {
+    set.add(props.task.todo)
+    newTask.push(props.task.todo)
+  }
+
+
+
+  console.log('porpsList', props)
   return (
     <ColumnLayout borders="vertical" id="taskList">
-      <div>Task 1</div>
-      <div>Task 2</div>
-      <div>Task 3</div>
+      {taskList ? taskList.map((x, key) => (
+        <div id='taskBox'>
+          <h3 key={key}>{x}</h3>
+        </div>
+      )) : undefined
+      }
+
     </ColumnLayout>
   );
 }
