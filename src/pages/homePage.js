@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from '../components/header'
+import HomeNav from '../components/homeNav'
 import Home from '../components/home'
 import Footer from '../components/footer'
 
 export default function homePage() {
   return (
     <div>
-      <Header />
+      <HomeNav />
       <Home />
       <Footer />
     </div>
