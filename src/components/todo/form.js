@@ -5,18 +5,24 @@ import '../todo/form.css'
 
 export default function AppForm(props) {
   const [todoValue, setTodoValue] = useState('');
+  const [data, setData] = useState('');
   // console.log('OK', todoValue)
-
+  // setTodoValue('');
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
       todo: todoValue
     }
-    setTodoValue(formData);
-    // console.log('FORMDATA', formData)
-    // props.handleTask(formData);
+    console.log('Data', formData)
+    setData(formData)
+    setTodoValue('')
   }
 
+  const handleClear = (e) => {
+    e.preventDefault();
+    setTodoValue('');
+    setData('');
+  }
 
 
   return (
@@ -26,10 +32,10 @@ export default function AppForm(props) {
           id='formBox'
           actions={
             <SpaceBetween direction="horizontal" size="xs">
-              <Button formAction="none" variant="link">
-                Cancel
+              <Button className='clearButton' formAction="none" onClick={handleClear} variant="link">
+                Clear
               </Button>
-              <Button type='submit' variant="primary">Add Task</Button>
+              <Button className='addButton' type='submit' variant="primary">Add Task</Button>
             </SpaceBetween>
           }
           header={
@@ -39,10 +45,6 @@ export default function AppForm(props) {
 
         >
           <FormField
-
-          // label={
-          //   <>Add To Do Item</>
-          // }
           >
             <h4>To Do Item</h4>
             <Input
@@ -66,7 +68,7 @@ export default function AppForm(props) {
       <div id='listBox'>
         <>
 
-          <List task={todoValue} />
+          <List task={data} />
         </>
       </div>
     </div>

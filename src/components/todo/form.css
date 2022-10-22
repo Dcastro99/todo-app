@@ -19,3 +19,11 @@
   padding:3rem;
   width: 70%;
 }
+.addButton{
+  background-color: #74BDCB!important;
+  border:#74BDCB!important;
+}
+.clearButton{
+  font-size: 17px!important;
+  color:#74BDCB!important;
+}
