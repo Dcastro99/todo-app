@@ -12,3 +12,7 @@ In Phase 1, we’re going to perform some refactoring of the To Do application a
 
   - How many To Do Items to show at once
   - Whether or not to show completed items
+
+  ### Table of Contents
+
+  - [Lab 31](/labs/lab31.md)
