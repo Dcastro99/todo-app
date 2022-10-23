@@ -3,28 +3,33 @@ import List from './list'
 import { FormField, Input, Form, SpaceBetween, Button, Header } from "@cloudscape-design/components";
 import '../todo/form.css'
 
+const task = [];
+
 export default function AppForm(props) {
   const [todoValue, setTodoValue] = useState('');
-  const [data, setData] = useState('');
-  // console.log('OK', todoValue)
+  const [data, setData] = useState([]);
+  console.log('OK', todoValue)
   // setTodoValue('');
   const handleSubmit = (e) => {
     e.preventDefault();
+    task.push(todoValue)
     const formData = {
-      todo: todoValue
+      todo: task
     }
-    console.log('Data', formData)
     setData(formData)
+    // console.log('Data From Form', data)
+    props.handleTask(formData)
     setTodoValue('')
   }
 
   const handleClear = (e) => {
     e.preventDefault();
     setTodoValue('');
-    setData('');
+    setData([]);
   }
 
 
+  console.log('data', data)
   return (
     <div id='todoContainer'>
       <form onSubmit={handleSubmit} >
@@ -39,7 +44,7 @@ export default function AppForm(props) {
             </SpaceBetween>
           }
           header={
-            <Header variant="h1">Add To Do Item</Header>
+            <Header variant="h2">Add To Do Item</Header>
 
           }
 
@@ -68,7 +73,8 @@ export default function AppForm(props) {
       <div id='listBox'>
         <>
 
-          <List task={data} />
+
+          <List task={data} handleTask={props.handleTask} />
         </>
       </div>
     </div>

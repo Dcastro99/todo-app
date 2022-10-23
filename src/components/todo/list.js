@@ -1,32 +1,59 @@
-import React from "react";
+import React, { useState } from 'react';
+import { Button } from '@cloudscape-design/components';
 import ColumnLayout from "@cloudscape-design/components/column-layout";
 import './list.css'
 
-let newTask = [];
-let set = new Set();
+
 
 
 export default function List(props) {
-  let taskList = newTask;
+  const [progress, setProgress] = useState('do your task!')
+  const [isActive, setIsActive] = useState(false);
+  const newTask = props.task.todo
+  // console.log('newTask:', newTask)
 
 
-  if (!set.has(props.task.todo)) {
-    set.add(props.task.todo)
-    newTask.push(props.task.todo)
+  const handleTask = () => {
+    console.log('progress>>>>>>>>>>>>>>>.')
+
+    setProgress('complete')
+    setIsActive(current => !current);
+
+    // setProgress('in-progress')
+
   }
 
 
 
-  console.log('porpsList', props)
   return (
-    <ColumnLayout borders="vertical" id="taskList">
-      {taskList ? taskList.map((x, key) => (
-        <div id='taskBox'>
-          <h3 key={key}>{x}</h3>
-        </div>
-      )) : undefined
-      }
+    <>
+      <ColumnLayout borders="vertical" id="taskList">
+        {newTask ? newTask.map((x, key) => (
+          <div id='taskContainer'>
+            <div id='taskBox'>
+              <h3 id='task'>"task:"</h3>
+              <h3 key={key}> {x}</h3>
+            </div>
+            <Button id='taskButton' onClick={handleTask}>in-progress</Button>
+            <div id='progress'
+              style={{
+                backgroundColor: isActive ? 'salmon' : '',
+                color: isActive ? 'white' : 'white',
 
-    </ColumnLayout>
+
+              }}
+
+            >
+              {progress}
+            </div>
+          </div>
+
+        )) : undefined
+        }
+
+      </ColumnLayout>
+    </>
+
   );
+
 }
