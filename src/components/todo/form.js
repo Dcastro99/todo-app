@@ -25,7 +25,7 @@ export default function AppForm(props) {
   const handleClear = (e) => {
     e.preventDefault();
     setTodoValue('');
-    setData([]);
+    // setData([]);
   }
 
 

@@ -34,7 +34,7 @@ export default function List(props) {
               <h3 id='task'>"task:"</h3>
               <h3 key={key}> {x}</h3>
             </div>
-            <Button id='taskButton' onClick={handleTask}>in-progress</Button>
+            <Button id='taskButton' onClick={handleTask}>progress</Button>
             <div id='progress'
               style={{
                 backgroundColor: isActive ? 'salmon' : '',
