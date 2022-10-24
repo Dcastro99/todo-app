@@ -54,7 +54,6 @@ export default function AppForm(props) {
             <h4>To Do Item</h4>
             <Input
               type='text'
-              value={todoValue}
               onChange={event =>
                 setTodoValue(event.detail.value)
               }

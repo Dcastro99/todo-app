@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Fuzzy+Bubbles&family=Libre+Baskerville:wght@700&display=swap');
 #todoContainer{
   display: flex;
   flex-direction: row; 
   justify-content:space-between;
   padding: 30px 20rem 0 10rem;
-  height: 70vh;
+  height: 72vh;
   /* box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; */
 
 }
@@ -30,4 +31,131 @@
 #task{
   margin-right:15px ;
   color:#FFA384;
+}
+#taskText{
+
+  font-size: 20px;
+  margin-top: 7px;
+ 
+}
+#taskText2{
+  font-size: 15px;
+  width: 20%;
+}
+
+#taskText4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 20%;
+}
+#taskText3{
+  font-size: 15px;
+  width: 50%;
+  margin-top: 10px;
+}
+
+#taskBox{
+  display: flex;
+  flex-direction: row; 
+  justify-content:space-between;
+  width: 100%;
+}
+#taskName{
+  display: flex;
+  flex-direction: row; 
+  justify-content:flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+#taskContainer{
+  display: flex;
+  flex-direction: column; 
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  border-radius: 15px;
+  padding: 0px 30px 0px 30px;
+  width: 80%;
+}
+
+#results{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  width: 100%;
+}
+
+#formInput{
+margin: 10px 0px 10px 0px;
+  height: 35px;
+  width: 90%;
+  border-radius: 5px;
+}
+
+#inputBar[type=range]{
+background-color: black;
+}
+#levelDiv {
+  display: flex;
+  align-items: center;
+margin: 10px;
+}
+#diffSpan{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  margin: 0 20px 0 0;
+}
+
+#formH4{
+  font-family: 'Libre Baskerville', serif;
+}
+#resultBox{
+  background-color: rgba(20, 154, 154, 0.331);
+  display: flex;
+  flex-direction: row; 
+  justify-content:flex-start;
+  padding: 10px;
+  width: 50%;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  /* border:solid #EFE7BC; */
+  border-radius: 15px;
+  margin-left: 20%;
+
+}
+
+input[type=range] {
+  height: 34px;
+  -webkit-appearance: none;
+ 
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  /* animate: 0.2s; */
+  box-shadow: 1px 1px 1px #002200;
+  background: #848484;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+  /* border: 1px solid #FFA384; */
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 2px 2px 2px #ffa38494;
+  border: 2px solid #a1cbc2;
+  height: 30px;
+  width: 7px;
+  border-radius: 2px;
+  background: #ffe46a;
+  cursor: pointer;
+  -webkit-appearance:none;
+  margin-top: -7px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #d3bd5dae;
 }

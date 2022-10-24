@@ -1,16 +1,14 @@
 import React from 'react'
 import Header from '../components/header'
-import Todo from '../components/todo/form'
+import Todo from '../components/todo/todo'
 import Footer from '../components/footer'
-import Results from '../components/todo/resultTracker'
+// import Results from '../components/todo/resultTracker'
 
-export default function todoPage(props) {
-  console.log('todoPage', props.data)
+export default function todoPage() {
   return (
     <div>
       <Header />
-      <Results data={props.data} />
-      <Todo handleTask={props.handleTask} />
+      <Todo />
       <Footer />
 
     </div>
