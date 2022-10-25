@@ -5,6 +5,9 @@
   "dependencies": {
     "@cloudscape-design/components": "^3.0.82",
     "@cloudscape-design/global-styles": "^1.0.1",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/material": "^5.10.10",
     "@mui/styled-engine-sc": "^5.10.6",
     "@testing-library/jest-dom": "^5.16.5",

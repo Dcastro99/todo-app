@@ -1,86 +1,35 @@
-import React, { useState } from 'react';
-import List from './list'
-import { FormField, Input, Form, SpaceBetween, Button, Header } from "@cloudscape-design/components";
-import '../todo/form.css'
+import { useState, useEffect } from 'react';
 
-const task = [];
+const useForm = (callback, defaultValues = {}) => {
 
-export default function AppForm(props) {
-  const [todoValue, setTodoValue] = useState('');
-  const [data, setData] = useState([]);
-  console.log('OK', todoValue)
-  // setTodoValue('');
+  const [values, setValues] = useState({});
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    task.push(todoValue)
-    const formData = {
-      todo: task
+    callback(values);
+  };
+
+  const handleChange = (event) => {
+    event.persist();
+    let { name, value } = event.target;
+    if (parseInt(value)) {
+      value = parseInt(value);
     }
-    setData(formData)
-    // console.log('Data From Form', data)
-    props.handleTask(formData)
-    setTodoValue('')
-  }
 
-  const handleClear = (e) => {
-    e.preventDefault();
-    setTodoValue('');
-    // setData([]);
-  }
-
-
-  console.log('data', data)
-  return (
-    <div id='todoContainer'>
-      <form onSubmit={handleSubmit} >
-        <Form
-          id='formBox'
-          actions={
-            <SpaceBetween direction="horizontal" size="xs">
-              <Button className='clearButton' formAction="none" onClick={handleClear} variant="link">
-                Clear
-              </Button>
-              <Button className='addButton' type='submit' variant="primary">Add Task</Button>
-            </SpaceBetween>
-          }
-          header={
-            <Header variant="h2">Add To Do Item</Header>
-
-          }
-
-        >
-          <FormField
-          >
-            <h4>To Do Item</h4>
-            <Input
-              type='text'
-              onChange={event =>
-                setTodoValue(event.detail.value)
-              }
-            />
-            <h4>Assigned To</h4>
-            <Input
-            // value={inputValue}
-            // onChange={event =>
-            //   setInputValue(event.detail.value)
-            // }
-            />
-          </FormField>
-
-        </Form>
-      </form>
-      <div id='listBox'>
-        <>
-
-
-          <List task={data} handleTask={props.handleTask} />
-        </>
-      </div>
-    </div>
-  );
-}
+    setValues(values => ({ ...values, [name]: value }));
+  };
 
 
 
+  useEffect(() => {
+    setValues(defaultValues);
+  }, [defaultValues]);
 
+  return {
+    handleChange,
+    handleSubmit,
+    values,
+  };
+};
 
+export default useForm;

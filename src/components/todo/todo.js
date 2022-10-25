@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import useForm from './form2';
+import useForm from './form';
 import { FormField, Form, SpaceBetween, Button, Header, ColumnLayout } from "@cloudscape-design/components";
-import './form.css'
+
 import { v4 as uuid } from 'uuid';
+import './form.css'
 
 
 const set = new Set();
@@ -54,7 +55,7 @@ const ToDo = () => {
   }, [list, incomplete]);
 
   return (
-    <>
+    <div id='body'>
       <header id='resultBox'>
         <h1>To Do List: {incomplete} items pending</h1>
       </header>
@@ -105,7 +106,8 @@ const ToDo = () => {
                 </div>
                 <div id='taskBox' key={item.id}>
                   <div id='taskName'>
-                    <h3 id='task'>"task:"</h3>
+                    <h3 id='task'>
+                      task:</h3>
                     <p id='taskText'>{item.text}</p>
                   </div>
                   <p id='taskText3'>Difficulty: {item.difficulty}</p>
@@ -117,7 +119,7 @@ const ToDo = () => {
           </ColumnLayout>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
