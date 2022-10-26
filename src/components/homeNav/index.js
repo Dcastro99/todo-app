@@ -2,7 +2,7 @@ import * as React from "react";
 import SpaceBetween from "@cloudscape-design/components/button";
 import Header from "@cloudscape-design/components/header";
 
-import './homeNav.css'
+import '../../style/homeNav.css'
 
 export default function HomeNav() {
 

@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from '../components/header'
-import Todo from '../components/todo/todo'
+import Todo from '../components/todo'
 import Footer from '../components/footer'
 import { useContext } from "react";
 import ThemeBotton from "../context/settings/themeButton";
 import { ThemeContext } from "../context/settings/themeContext";
-import './todoPage.css'
+import '../style/todoPage.css'
 // import Results from '../components/todo/resultTracker'
 
 export default function TodoPage() {
