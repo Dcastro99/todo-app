@@ -1,13 +1,12 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
-import { Button } from "@cloudscape-design/components";
-import '../../assets/styles/Login.css'
+import '../../style/homeNav.css'
 
 const LoginButton = () => {
   const { isAuthenticated, loginWithRedirect } = useAuth0();
 
   if (!isAuthenticated)
-    return <Button id="loginBtn" variant="contained" onClick={() => loginWithRedirect()}> Log In</Button >;
+    return <button className="loginButton" variant="contained" onClick={() => loginWithRedirect()}> Login</button >;
 };
 
 export default LoginButton;

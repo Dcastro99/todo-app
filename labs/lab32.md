@@ -5,7 +5,8 @@
 Author: Danny Castro
 
 - tests report
-- front-end
+
+- [netlify](https://dannys-todo-app.netlify.app)
 
 ### Setup
 
