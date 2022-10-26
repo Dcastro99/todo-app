@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "./themeContext";
-import './themeBtn.css'
+import '../../style/themeBtn.css'
 
 function ThemeBotton() {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
@@ -11,14 +11,14 @@ function ThemeBotton() {
   return (
     <button
       id='themeBtn'
-
+      style={darkMode ? { borderColor: '#EFE7BC' } : { borderColor: 'salmon' }}
       className={
         darkMode
           ? "dark-mode"
           : ""
       }
       onClick={handleTheme}
-    >Dark-Mode</button>
+    > Dark - Mode</button >
   );
 }
 

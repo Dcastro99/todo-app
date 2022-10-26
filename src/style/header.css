@@ -7,7 +7,7 @@ margin-bottom: 20px;
 #title{
   color:#ffa384;
   padding: 10px;
-  
+ 
 }
 
 .loginButton{
@@ -20,6 +20,7 @@ padding: 7px 15px;
 }
 
 #spaceButton{
+  margin-right: 20px;
   border-color: #f38b8b!important;  
 }
 
