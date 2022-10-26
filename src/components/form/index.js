@@ -19,7 +19,7 @@ export default function AppForm(props) {
           </SpaceBetween>
         }
         header={
-          <header className={darkMode ? "formHeader" : "dark-formHeader"} ><h2>Add To Do Item</h2></header>
+          <header id={darkMode ? "formHeader" : "dark-formHeader"} ><h2>Add To Do Item</h2></header>
 
         }
       >
