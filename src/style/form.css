@@ -96,6 +96,14 @@
   padding: 0px 10px 0px 30px;
   width: 80%;
 }
+#dark-taskContainer{
+  display: flex;
+  flex-direction: column; 
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, #EFE7BC 0px 3px 7px;
+  border-radius: 15px;
+  padding: 0px 10px 0px 30px;
+  width: 80%;
+}
 
 #results{
   display: flex;
@@ -177,7 +185,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 20px;
   width: 6px;
   border-radius: 2px;
-  background: #ffe46a;
+  background: #EFE7BC;
   cursor: pointer;
   -webkit-appearance:none;
   margin-top: -7px;
