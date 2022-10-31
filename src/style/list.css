@@ -65,3 +65,9 @@ background-color: #74BDCB;
     font-family: 'Fuzzy Bubbles', cursive;
   }
   
+  .complete{
+background-color: red;
+  }
+  .dark-complete{
+    background-color: greenyellow;
+  }
