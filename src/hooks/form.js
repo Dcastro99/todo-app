@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 
 const useForm = (callback, defaultValues = {}) => {
-
+  // console.log('BEGGIN HERE??::', props)
   const [values, setValues] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
     callback(values);
+
+    // props.handleCreateTodo(values);
   };
 
   const handleChange = (event) => {

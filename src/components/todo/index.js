@@ -3,13 +3,16 @@ import Form from '../form'
 import List from '../list'
 import useForm from '../../hooks/form';
 import { v4 as uuid } from 'uuid';
+import Auth from '../../context/auth/index';
 import '../../style/form.css'
 
 
 const set = new Set();
 
 
-const ToDo = () => {
+const ToDo = (props) => {
+
+  console.log('WHAT ARE YOU??', props)
   const [defaultValues] = useState({
     difficulty: 4,
   });
@@ -32,7 +35,12 @@ const ToDo = () => {
 
     if (!set.has(item.text + item.assignee)) {
       set.add(item.text + item.assignee)
-      setList([...list, item]);
+      let allTasks = [...list, item]
+      console.log('VALUES??::', item)
+
+      props.handleCreateTodo(item)
+      setList(allTasks);
+
     }
   }
 
@@ -41,8 +49,7 @@ const ToDo = () => {
 
     const items = list.map(item => {
       if (item.id === id) {
-        let complete = item.complete;
-        console.log('STUUPIDO', complete)
+
         item.complete = !item.complete;
       }
       return item;
@@ -66,8 +73,10 @@ const ToDo = () => {
       </header>
 
       <div id='todoContainer'>
-        <Form handleChange={handleChange} clearAll={clearAll} handleSubmit={handleSubmit} />
-        <List toggleComplete={toggleComplete} list={list} deleteItem={deleteItem} />
+        <Auth userType='create'>
+          <Form handleChange={handleChange} clearAll={clearAll} handleSubmit={handleSubmit} />
+        </Auth>
+        <List toggleComplete={toggleComplete} list={list} data={props.data} deleteItem={deleteItem} />
       </div>
     </div>
 
