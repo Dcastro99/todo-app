@@ -56,6 +56,7 @@
 #taskText2{
   font-size: 15px;
   width: 20%;
+  
 }
 
 #taskText4{
@@ -118,9 +119,12 @@
 }
 
 #results{
+  /* background-color: #FFA384; */
   display: flex;
   flex-direction: row;
+  align-items:center;
   justify-content:space-between;
+  
   width: 100%;
 }
 
@@ -160,7 +164,7 @@ margin: 10px;
 #resultBox{
   background-color:  #E7F2F8;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content:flex-start;
   padding: 10px;
   width: 50%;

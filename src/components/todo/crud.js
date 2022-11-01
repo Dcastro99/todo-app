@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import { withAuth0 } from "@auth0/auth0-react";
 import Todolist from './index'
 // import List from '../list/index'
@@ -6,17 +6,9 @@ import axios from 'axios';
 
 
 function Test(props) {
-  const [listData, setListDAta] = useState(null);
+  // const [listData, setListDAta] = useState(null);
 
-  const handleGetAllUsers = async () => {
-    const config = {
-      baseURL: `${process.env.REACT_APP_HEROKU_URL}`,
-      method: 'get',
-    };
-    const res = await axios(config);
-    console.log('REZZZ----->>>>>', res.data);
-    setListDAta(res.data)
-  };
+
 
   const handleCreateTodo = async (newTodoInfo) => {
     console.log('BAHAHAHAHA')
@@ -37,20 +29,20 @@ function Test(props) {
 
       console.log('Todo\'s from DB: ', todoResponse.data);
 
-      handleGetAllUsers();
+      // handleGetAllUsers();
     }
   };
 
-  useEffect(() => {
-    console.log('KOOL')
-    handleGetAllUsers();
-  }, [setListDAta])
-  // handleCreateTodo={handleCreateTodo}
+  // useEffect(() => {
+  //   console.log('KOOL')
+  //   // handleGetAllUsers();
+  // }, [setListDAta, props])
+  // console.log('CMON!!::', listData)
   return (
 
 
 
-    <Todolist handleCreateTodo={handleCreateTodo} data={listData} />
+    <Todolist handleCreateTodo={handleCreateTodo} />
 
   );
 
