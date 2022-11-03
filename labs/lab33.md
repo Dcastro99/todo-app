@@ -20,6 +20,11 @@ npm start
 
 - Endpoint: `/`
 
+### Test app
+
+- `email:` testUserDevLife@gmail.com
+- `password:` test2022
+
 Returns
 
 ![](../images/lab33.png)
