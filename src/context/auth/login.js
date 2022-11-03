@@ -7,7 +7,7 @@ import '../../style/header.css'
 function Login() {
 
   const context = useContext(LoginContext);
-  console.log('What??::', context)
+  // console.log('What??::', context)
   const {
     isAuthenticated,
     logout,
@@ -26,7 +26,7 @@ function Login() {
 
   useEffect(() => {
     if (isAuthenticated && user) {
-      console.log("user is => ", user)
+      // console.log("user is => ", user)
       context.login(user);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

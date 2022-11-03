@@ -25,13 +25,13 @@ const ToDo = (props) => {
 
 
   const handleGetAllTodos = async () => {
-    console.log('GET ALL TRIGGERED')
+    // console.log('GET ALL TRIGGERED')
     const config = {
       baseURL: `${process.env.REACT_APP_HEROKU_URL}`,
       method: 'get',
     };
     const res = await axios(config);
-    console.log('REZZZ----->>>>>', res.data);
+    // console.log('REZZZ----->>>>>', res.data);
     setList(res.data)
 
   };
@@ -44,7 +44,7 @@ const ToDo = (props) => {
 
   function deleteItem(_id) {
     const items = list.filter(item => item._id !== _id);
-    console.log('ID??----------------------->', items)
+    // console.log('ID??----------------------->', items)
     props.handleDeleteTodo(_id)
     setList(items);
   }
@@ -59,7 +59,7 @@ const ToDo = (props) => {
       // let allTasks = [...list, item]
       let allTasks = [...list, item]
 
-      console.log('VALUES??::', item)
+      // console.log('VALUES??::', item)
 
       props.handleCreateTodo(item)
       setList(allTasks);
@@ -83,7 +83,7 @@ const ToDo = (props) => {
     setList(items);
 
   }
-  console.log('ITEMS=========>>>>', list)
+  // console.log('ITEMS=========>>>>', list)
 
 
 

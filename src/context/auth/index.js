@@ -9,7 +9,7 @@ function Login(props) {
   const context = useContext(LoginContext);
   const isLoggedIn = context.loggedIn;
   const canDo = props.userType ? context.can(props.userType) : true;
-  console.log('USERTYPE', canDo)
+  // console.log('USERTYPE', canDo)
   const okToRender = isLoggedIn && canDo;
 
 
