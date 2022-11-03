@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../components/header'
-// import Todo from '../components/todo'
 import Footer from '../components/footer'
 import Crud from '../components/todo/crud'
 import { useContext } from "react";
@@ -16,7 +15,6 @@ export default function TodoPage() {
       <Header />
       <ThemeButton />
       <Crud />
-      {/* <Todo /> */}
       <Footer />
 
     </div>
