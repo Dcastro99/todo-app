@@ -26,9 +26,10 @@ function Login() {
 
   useEffect(() => {
     if (isAuthenticated && user) {
-      console.log("user is : ", user)
+      console.log("user is => ", user)
       context.login(user);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated, user])
 
   return (
