@@ -31,8 +31,8 @@ export default function List(props) {
 
           >Complete: {item.complete.toString()}</div> */}
           {item.complete === false ? (
-            <button id='buttonInProgress' onClick={() => props.toggleComplete(item._id)}>in-Progress</button>
-          ) : <button id='buttonComplete' onClick={() => props.toggleComplete(item._id)}>Complete</button>}
+            <button id={darkMode ? "dark-buttonInProgress" : "buttonInProgress"} onClick={() => props.toggleComplete(item._id)}>in-Progress</button>
+          ) : <button id={darkMode ? "dark-buttonComplete" : "buttonComplete"} onClick={() => props.toggleComplete(item._id)}>Complete</button>}
         </div>
         <hr />
         <div id='taskBox' key={item._id}>

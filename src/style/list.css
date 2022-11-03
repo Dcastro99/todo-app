@@ -71,17 +71,35 @@ background-color: red;
   .dark-complete{
     background-color: greenyellow;
   }
- #buttonInProgress{
-  background-color: rgba(217, 18, 18, 0.693);
+#buttonInProgress{
+  color: rgb(71, 76, 77);
+  background-color: rgba(230, 55, 55, 0.693);
   border-radius: 7px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+#dark-buttonInProgress{
+  color: rgb(0, 0, 0);
+  background-color: rgba(177, 76, 76, 0.745);
+  border-radius: 7px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
 
- }
- #buttonComplete{
+
+#buttonComplete{
+  color: rgb(71, 76, 77);
   background-color: rgba(72, 206, 54, 0.693);
   border-radius: 7px;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 
- }
+}
+#dark-buttonComplete{
+color: rgb(0, 0, 0);
+background-color: rgba(78, 188, 63, 0.619);
+border-radius: 7px;
+border: none;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+}

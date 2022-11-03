@@ -26,7 +26,7 @@ function Login() {
 
   useEffect(() => {
     if (isAuthenticated && user) {
-      console.log("user is : ", user)
+      console.log("user is => ", user)
       context.login(user);
     }
   }, [isAuthenticated, user])
