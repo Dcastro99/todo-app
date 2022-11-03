@@ -27,12 +27,11 @@ export default function List(props) {
       <div className='resultBox' id={darkMode ? "dark-taskContainer" : "taskContainer"}>
         <div id='results'>
           <div key={key} id='taskText2'> {item.assignee}</div>
-          {/* <div key={key} id='taskText4' onClick={() => props.toggleComplete(item._id)}
-
-          >Complete: {item.complete.toString()}</div> */}
-          {item.complete === false ? (
-            <button id={darkMode ? "dark-buttonInProgress" : "buttonInProgress"} onClick={() => props.toggleComplete(item._id)}>in-Progress</button>
-          ) : <button id={darkMode ? "dark-buttonComplete" : "buttonComplete"} onClick={() => props.toggleComplete(item._id)}>Complete</button>}
+          <Auth userType='update'>
+            {item.complete === false ? (
+              <button id={darkMode ? "dark-buttonInProgress" : "buttonInProgress"} onClick={() => props.toggleComplete(item._id)}>in-Progress</button>
+            ) : <button id={darkMode ? "dark-buttonComplete" : "buttonComplete"} onClick={() => props.toggleComplete(item._id)}>Complete</button>}
+          </Auth>
         </div>
         <hr />
         <div id='taskBox' key={item._id}>
@@ -47,7 +46,7 @@ export default function List(props) {
           </Auth>
         </div>
 
-      </div>
+      </div >
     )
   })
 
@@ -62,7 +61,7 @@ export default function List(props) {
   const changePage = ({ selected }) => {
     setPageNumber(selected)
   }
-  console.log('pageCount', pageCount)
+  // console.log('pageCount', pageCount)
   return (
     <div id='listBox'>
       <ColumnLayout>
