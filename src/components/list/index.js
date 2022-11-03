@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { ColumnLayout } from "@cloudscape-design/components";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/settings/themeContext";
-import axios from 'axios';
+// import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import Auth from '../../context/auth/index';
 import '../../style/list.css'
@@ -11,47 +11,31 @@ import '../../style/list.css'
 export default function List(props) {
   const { darkMode } = useContext(ThemeContext);
   const [pageNumber, setPageNumber] = useState(0);
-  const [dataList, setDataList] = useState([])
-  // const [dBList, setDBList] = useState(null);
+  // const [dataList, setDataList] = useState([])
   const resultsPage = 3
   const pagesVisited = pageNumber * resultsPage
 
 
   console.log('NEW LIST', props.data)
-  console.log('DATA-LIST', dataList)
+  // console.log('DATA-LIST', dataList)
 
 
-  const handleGetAllTodos = async () => {
-    const config = {
-      baseURL: `${process.env.REACT_APP_HEROKU_URL}`,
-      method: 'get',
-    };
-    const res = await axios(config);
-    console.log('REZZZ----->>>>>', res.data);
-    setDataList(res.data)
-  };
-
-  useEffect(() => {
-    // async function fetchData() {
-    handleGetAllTodos();
-
-    // }
-
-    // fetchData();
-  }, [])
 
 
-  const displayResults = dataList.slice(pagesVisited, pagesVisited + resultsPage).map((item, key) => {
+  const displayResults = props.list.slice(pagesVisited, pagesVisited + resultsPage).map((item, key) => {
     return (
       <div className='resultBox' id={darkMode ? "dark-taskContainer" : "taskContainer"}>
         <div id='results'>
           <div key={key} id='taskText2'> {item.assignee}</div>
-          <div key={key} id='taskText4' onClick={() => props.toggleComplete(item.id)}
+          {/* <div key={key} id='taskText4' onClick={() => props.toggleComplete(item._id)}
 
-          >Complete: {item.complete.toString()}</div>
+          >Complete: {item.complete.toString()}</div> */}
+          {item.complete === false ? (
+            <button id='buttonInProgress' onClick={() => props.toggleComplete(item._id)}>in-Progress</button>
+          ) : <button id='buttonComplete' onClick={() => props.toggleComplete(item._id)}>Complete</button>}
         </div>
         <hr />
-        <div id='taskBox' key={item.id}>
+        <div id='taskBox' key={item._id}>
           <div id='taskName'>
             <h3 id='task'>
               task:</h3>
@@ -59,7 +43,7 @@ export default function List(props) {
           </div>
           <p key={key} id='taskText3'>Difficulty: {item.difficulty}</p>
           <Auth userType='delete'>
-            <button key={key} id='deleteBtn' onClick={() => props.deleteItem(item.id)}>X</button>
+            <button key={key} id='deleteBtn' onClick={() => props.deleteItem(item._id)}>X</button>
           </Auth>
         </div>
 
@@ -70,7 +54,7 @@ export default function List(props) {
 
 
 
-  const pageCount = Math.ceil(dataList.length / resultsPage)
+  const pageCount = Math.ceil(props.list.length / resultsPage)
 
 
 
@@ -83,7 +67,7 @@ export default function List(props) {
     <div id='listBox'>
       <ColumnLayout>
 
-        {dataList.length === 0 ? (
+        {props.list.length === 0 ? (
 
           <>
 

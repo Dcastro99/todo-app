@@ -71,4 +71,17 @@ background-color: red;
   .dark-complete{
     background-color: greenyellow;
   }
- 
+ #buttonInProgress{
+  background-color: rgba(217, 18, 18, 0.693);
+  border-radius: 7px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+ }
+ #buttonComplete{
+  background-color: rgba(72, 206, 54, 0.693);
+  border-radius: 7px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+ }
