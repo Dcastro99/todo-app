@@ -6,7 +6,6 @@ import '../../style/form.css'
 
 
 export default function AppForm(props) {
-  // console.log('BEGGIN HERE...::', props)
   const { darkMode } = useContext(ThemeContext);
   return (
     <form id='todoForm' onSubmit={props.handleSubmit}>

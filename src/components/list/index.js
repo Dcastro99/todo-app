@@ -2,22 +2,17 @@ import React, { useState } from 'react'
 import { ColumnLayout } from "@cloudscape-design/components";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/settings/themeContext";
-// import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import Auth from '../../context/auth/index';
 import '../../style/list.css'
 
-// let displayResults = [];
 export default function List(props) {
   const { darkMode } = useContext(ThemeContext);
   const [pageNumber, setPageNumber] = useState(0);
-  // const [dataList, setDataList] = useState([])
   const resultsPage = 3
   const pagesVisited = pageNumber * resultsPage
 
 
-  // console.log('NEW LIST', props.data)
-  // console.log('DATA-LIST', dataList)
 
 
 
