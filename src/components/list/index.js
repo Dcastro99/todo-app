@@ -16,7 +16,7 @@ export default function List(props) {
   const pagesVisited = pageNumber * resultsPage
 
 
-  console.log('NEW LIST', props.data)
+  // console.log('NEW LIST', props.data)
   // console.log('DATA-LIST', dataList)
 
 

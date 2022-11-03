@@ -9,7 +9,7 @@ function Test(props) {
 
 
   const handleCreateTodo = async (newTodoInfo) => {
-    console.log('BAHAHAHAHA')
+    // console.log('BAHAHAHAHA')
     const res = await props.auth0.getIdTokenClaims();
     const jwt = res.__raw;
     const config = {
@@ -20,14 +20,14 @@ function Test(props) {
       data: newTodoInfo,
     };
 
-    const todoResponse = await axios(config);
+    await axios(config);
 
-    console.log('Todo\'s from DB: ', todoResponse.data);
+    // console.log('Todo\'s from DB: ', todoResponse.data);
 
   };
 
   const handleDeleteTodo = async (id) => {
-    console.log('DELETED!!!====', id)
+    // console.log('DELETED!!!====', id)
     const res = await props.auth0.getIdTokenClaims();
     const jwt = res.__raw;
     const config = {
@@ -36,8 +36,8 @@ function Test(props) {
       baseURL: `${process.env.REACT_APP_HEROKU_URL}/todo/${id}`,
     };
 
-    const deleteInfo = await axios(config);
-    console.log('U DELETED SUCKA!----->>>>>', deleteInfo);
+    await axios(config);
+    // console.log('U DELETED SUCKA!----->>>>>', deleteInfo);
 
   };
 

@@ -41,7 +41,7 @@ class LoginProvider extends React.Component {
           email: user.email
         };
         const response = await axios(config);
-        console.log('RES:::: ', response.data);
+        // console.log('RES:::: ', response.data);
         const auth = response.data;
 
         this.validateUser(auth);
