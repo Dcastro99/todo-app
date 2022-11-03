@@ -9,8 +9,8 @@ function LoginProvider(props) {
   const [loggedIn, setLoggedIn] = useState(false);
   const [token, setToken] = useState(null);
   const [user, setUser] = useState({});
-  // const [login, setLogin] = useState();
-  // const [logout, setLogout] = useState();
+  // const [login, setLogin] = useState(false);
+  // const [logout, setLogout] = useState(false);
   // const [can, setCan] = useState(can);
 
   // constructor(props) {
@@ -23,7 +23,12 @@ function LoginProvider(props) {
   //     logout: this.logout,
   //     can: this.can
   //   }
-  // }
+  // 
+  const obj = {
+    loggedIn,
+    token,
+    user
+  }
 
   const can = (userType) => {
     return user.userType?.includes(userType);
@@ -94,10 +99,8 @@ function LoginProvider(props) {
 
 
   return (
-    logout,
-    login,
-    can,
-    < LoginContext.Provider value={user} >
+
+    < LoginContext.Provider value={obj} >
 
       {props.children}
     </LoginContext.Provider >
