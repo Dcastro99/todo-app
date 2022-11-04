@@ -5,6 +5,7 @@
 - [Lab 31](/labs/lab31.md)
 - [Lab 32](/labs/lab32.md)
 - [Lab 33](/labs/lab33.md)
+- [Lab 34](/labs/lab34.md)
 
 ## Phase 1 Requirements
 
@@ -51,3 +52,7 @@ In Phase 3, we’d like to extend the functionality of the application by requir
 - As a user, I want to ensure that only fellow users that are allowed to “update”, based on their user type, can mark To Do Items complete
 
 - As a user, I want to ensure that only fellow users that are allowed to “delete”, based on their user type, can delete new To Do Items
+
+## Phase 4 Requirements
+
+In Phase 4, we will finalize the functionality of the application by connecting to live servers for login, authorization, and data access
