@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Fuzzy+Bubbles&family=Libre+Baskerville:wght@700&display=swap');
+
+#todoContainer{
+  display: flex;
+  flex-direction: row; 
+  justify-content:space-between;
+  padding: 30px 20rem 0 10rem;
+  height: 69.2vh;
+  /* background-color: #ccc; */
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; */
+
+}
+
+#deleteBtn{
+  border: none;
+  color: white;
+  background-color:#74BDCB ;
+  border-radius: 7px;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+#formBox {
+  padding:3rem;
+  border:solid #EFE7BC;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  width:22rem;
+}
+#listBox{
+  padding:1rem;
+  width: 100%;
+}
+.addButton{
+  background-color: #74BDCB!important;
+  border:#74BDCB!important;
+}
+
+
+.clearButton{
+  font-size: 17px!important;
+  color:#74BDCB!important;
+}
+#task{
+  margin-right:15px ;
+  color:#FFA384;
+}
+#taskText{
+
+  font-size: 20px;
+  margin-top: 7px;
+ 
+}
+#taskText2{
+  font-size: 15px;
+  width: 20%;
+  
+}
+
+#taskText4{
+  /* background-color: rgb(0, 210, 0); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 20%;
+}
+
+#dark-taskText4{
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 20%;
+}
+#taskText3{
+  font-size: 15px;
+  width: 50%;
+  margin-top: 10px;
+}
+
+#taskBox{
+
+/* background-color: #E7F2F8; */
+  display: flex;
+  flex-direction: row; 
+  justify-content:space-between;
+  align-items: center;
+  width: 100%;
+}
+#taskName{
+  display: flex;
+  flex-direction: row; 
+  justify-content:flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+#taskContainer{
+  display: flex;
+  flex-direction: column; 
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  border-radius: 15px;
+  padding: 0px 10px 0px 30px;
+  width: 80%;
+}
+#dark-taskContainer{
+  display: flex;
+  flex-direction: column; 
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, #EFE7BC 0px 3px 7px;
+  border-radius: 15px;
+  padding: 0px 10px 0px 30px;
+  width: 80%;
+}
+
+#results{
+  /* background-color: #FFA384; */
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:space-between;
+  
+  width: 100%;
+}
+
+#formInput{
+margin: 10px 0px 10px 0px;
+  height: 35px;
+  width: 90%;
+  outline: none;
+  border: 3px solid 
+  #E7F2F8;
+  -webkit-transition: 0.5s;
+  transition: 0.8s;
+  border-radius: 5px;
+}
+#formInput:focus{
+  border: 3px solid 
+  #ccc;
+}
+
+#inputBar[type=range]{
+background-color: black;
+}
+#levelDiv {
+  display: flex;
+  align-items: center;
+margin: 10px;
+}
+#diffSpan{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  margin: 0 20px 0 0;
+}
+
+#formH4{
+  font-family: 'Libre Baskerville', serif;
+}
+#resultBox{
+  background-color:  #E7F2F8;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  padding: 10px;
+  width: 50%;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  /* border:solid #EFE7BC; */
+  border-radius: 15px;
+  margin-left: 20%;
+
+}
+
+input[type=range] {
+  /* height: 10px; */
+  -webkit-appearance: none;
+ 
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  /* animate: 0.2s; */
+  box-shadow: 1px 1px 1px #002200;
+  background: #848484;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+  /* border: 1px solid #FFA384; */
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 2px 2px 2px #ffa38494;
+  border: 2px solid #a1cbc2;
+  height: 20px;
+  width: 6px;
+  border-radius: 2px;
+  background: #EFE7BC;
+  cursor: pointer;
+  -webkit-appearance:none;
+  margin-top: -7px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #d3bd5dae;
+}
+
+#formHeader {
+  width: 290px;
+  color: #ffa384!important; 
+  /* font-weight: 100px!important;  */
+  font-family: 'Fuzzy Bubbles', cursive;
+  /* size: 500px!important; */
+  background-color: rgb(82, 81, 81);
+}
+#dark-formHeader{
+  width: 290px;
+  font-family: 'Fuzzy Bubbles', cursive;
+  /* color: #ffffff!important; */
+}

@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# LAB - Context API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Table of Contents
 
-## Available Scripts
+- [Lab 31](/labs/lab31.md)
+- [Lab 32](/labs/lab32.md)
+- [Lab 33](/labs/lab33.md)
+- [Lab 34](/labs/lab34.md)
 
-In the project directory, you can run:
+## Phase 1 Requirements
 
-### `npm start`
+In Phase 1, we’re going to perform some refactoring of the To Do application as built by another team. This application mixes application state and user settings at the top level and passes things around. It was a good proof of concept, but we need to make this production ready.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Style the application using the Blueprint Component API{target:\_blank}
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Properly modularize the application into separate components
 
-### `npm test`
+- Implement the Context API to make some basic application settings available to components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - How many To Do Items to show at once
+  - Whether or not to show completed items
 
-### `npm run build`
+## Phase 2 Requirements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In Phase 2, we’re going to extend the functionality of our application by allowing the user to make some decisions on how they would like the application to function. Specifically, we’ll let them make changes to 2 settings.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Implement the Context API to make some basic application settings available to components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - How many To Do Items to show at once
+  - Whether or not to show completed items
 
-### `npm run eject`
+- Provide the users with a form where they can change the values for those settings
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  - This should be given in the form of a new component, perhaps linked to from the main navigation
+  - _Hint: Use Browser Router to create the page/route/component for this_
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Save the users choices in Local Storage
+- Retrieve their preferences from Local Storage and apply them to the application on startup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Phase 3 Requirements
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In Phase 3, we’d like to extend the functionality of the application by requiring users be logged in to view items and also restrict access based on user type. The user stories from Phases 1, and 2 remain unchanged. For this phase, we are now adding the following new user stories.
 
-## Learn More
+- As a user, I want to provide a way for other users to create new accounts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- As a user, I want to provide a way for all users to login to their account
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- As a user, I want to make sure that my To Do items are only viewable to users that have logged in with a valid account.
 
-### Code Splitting
+- As a user, I want to ensure that only fellow users that are allowed to “create”, based on their user type, can add new To Do Items
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- As a user, I want to ensure that only fellow users that are allowed to “update”, based on their user type, can mark To Do Items complete
 
-### Analyzing the Bundle Size
+- As a user, I want to ensure that only fellow users that are allowed to “delete”, based on their user type, can delete new To Do Items
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Phase 4 Requirements
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In Phase 4, we will finalize the functionality of the application by connecting to live servers for login, authorization, and data access

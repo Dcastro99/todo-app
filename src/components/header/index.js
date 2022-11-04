@@ -1,16 +1,20 @@
 import * as React from "react";
 import SpaceBetween from "@cloudscape-design/components/button";
 import Header from "@cloudscape-design/components/header";
-import '../header/header.css'
+import Login from '../../context/auth/login'
 
-export default function header() {
+import '../../style/header.css'
+
+export default function TodoHeader() {
+
   return (
     <Header
       className="header"
       variant="h1"
       actions={
         <SpaceBetween id='spaceButton' direction="horizontal" size="xs">
-          <button className='loginButton' variant="primary">Logout</button>
+          <Login />
+          {/* <LogoutButton /> */}
         </SpaceBetween>
       }
     >
