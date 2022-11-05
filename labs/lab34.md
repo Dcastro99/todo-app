@@ -22,6 +22,18 @@ npm start
 
 ### Test app
 
+To test the Admin abilities,fist:
+
+1.  click Continue with google
+
+    ![](../images/sign%20in%20to%20todo.png)
+
+2.  then click on Use another account
+
+    ![](../images/todoAccount.png)
+
+3.  after use email and password provided to log in.
+
 - `email:` testUserDevLife@gmail.com
 - `password:` test2022
 
