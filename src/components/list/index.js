@@ -12,7 +12,7 @@ export default function List(props) {
   const resultsPage = 3
   const pagesVisited = pageNumber * resultsPage
 
-
+  //
   const displayResults = props.list.slice(pagesVisited, pagesVisited + resultsPage).map((item, key) => {
     return (
       <div className='resultBox' id={darkMode ? "dark-taskContainer" : "taskContainer"}>
