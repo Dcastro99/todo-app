@@ -13,10 +13,6 @@ export default function List(props) {
   const pagesVisited = pageNumber * resultsPage
 
 
-
-
-
-
   const displayResults = props.list.slice(pagesVisited, pagesVisited + resultsPage).map((item, key) => {
     return (
       <div className='resultBox' id={darkMode ? "dark-taskContainer" : "taskContainer"}>
@@ -45,13 +41,7 @@ export default function List(props) {
     )
   })
 
-
-
-
   const pageCount = Math.ceil(props.list.length / resultsPage)
-
-
-
 
   const changePage = ({ selected }) => {
     setPageNumber(selected)
